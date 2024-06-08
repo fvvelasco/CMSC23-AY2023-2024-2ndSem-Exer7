@@ -28,7 +28,7 @@ class _ContactslistPageState extends State<ContactslistPage> {
     if (!await FlutterContacts.requestPermission()) {
       setState(() => _permissionDenied = true);
     } else {
-      var contacts = await FlutterContacts.getContacts();
+      var contacts = await FlutterContacts.getContacts(withAccounts: true);
       setState(() => _contacts = contacts);
     }
   }
@@ -68,7 +68,7 @@ class _ContactslistPageState extends State<ContactslistPage> {
             title: Text(_contacts![i].displayName),
             onTap: () async {
               final fullContact =
-                  await FlutterContacts.getContact(_contacts![i].id);
+                  await FlutterContacts.getContact(_contacts![i].id, withAccounts: true);
               if (context.mounted) {
                 Navigator.of(context).pushNamed(
                   '/contact',
