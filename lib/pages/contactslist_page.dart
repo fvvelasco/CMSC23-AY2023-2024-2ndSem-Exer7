@@ -36,7 +36,22 @@ class _ContactslistPageState extends State<ContactslistPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('My Own Contacts App')),
+        appBar: AppBar(
+          title: const Text('My Own Contacts App'),
+          actions: <Widget>[
+            IconButton(
+              icon: const Icon(Icons.add),
+              tooltip: 'Add new Contacts',
+              onPressed: () {
+                if (context.mounted) {
+                Navigator.of(context).pushNamed(
+                  '/addcontact',
+                );
+              }
+              }
+            )
+          ],
+        ),
         body: _body());
   }
 

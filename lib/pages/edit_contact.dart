@@ -8,6 +8,19 @@ class EditContactPage extends StatefulWidget {
 class _EditContactPageState extends State<EditContactPage>{
   @override
   Widget build(BuildContext context){
-    return MaterialApp();
+    return Scaffold(
+      appBar: AppBar(title: Text("Edit Contact")),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          ElevatedButton(
+            onPressed: () async {
+              Navigator.of(context).pop();
+            },
+            child: const Text("Add")
+          ),
+        ]),
+      )
+    );
   }
 }
