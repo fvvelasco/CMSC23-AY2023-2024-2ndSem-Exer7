@@ -12,7 +12,7 @@ This program is a basic contacts app with CRUD capabilities.
 
 I separated each of the CRUD features in separate pages. Page navigation goes like this <br/>
 ContactsListPage -> DisplayContactPage (delete function also here) -> EditContactPage   <br/>
-                 -> AddContactPage
+ContactsListPage -> AddContactPage
 
 
 ## Challenges encountered
