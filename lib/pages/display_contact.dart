@@ -39,7 +39,7 @@ class _ContactPageState extends State<ContactPage> {
           ElevatedButton(
             onPressed: () async {
               await contact.delete();
-              Navigator.of(context).pop();
+              if (mounted) Navigator.pop(context);
             }, 
             child: const Text("Delete")
           ),

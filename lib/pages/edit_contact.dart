@@ -15,7 +15,7 @@ class _EditContactPageState extends State<EditContactPage>{
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           ElevatedButton(
             onPressed: () async {
-              Navigator.of(context).pop();
+              if (mounted) Navigator.pop(context);
             },
             child: const Text("Add")
           ),
