@@ -1,4 +1,3 @@
-// TODO Implement this library.
 import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
 
@@ -37,10 +36,16 @@ class _ContactslistPageState extends State<ContactslistPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('My Own Contacts App'),
+          title: const Text(
+            'My Own Contacts App',
+            style: TextStyle(
+              color: Colors.white
+            ),
+          ),
+          backgroundColor: Colors.blue,
           actions: <Widget>[
             IconButton(
-              icon: const Icon(Icons.add),
+              icon: const Icon(Icons.add, color: Colors.white,),
               tooltip: 'Add new Contacts',
               onPressed: () {
                 if (context.mounted) {

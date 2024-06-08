@@ -1,16 +1,37 @@
-# exer7
+# Week 7: Android Features and Utilities
 
-A new Flutter project.
+**Name:** Francis Vernon C. Velasco <br/>
+**Section:** U-4L <br/>
+**Student number:** 2021 - 68765 <br/>
 
-## Getting Started
+## Code Description
 
-This project is a starting point for a Flutter application.
+This program is a basic contacts app with CRUD capabilities.
 
-A few resources to get you started if this is your first Flutter project:
+## Things you did in the code
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+I separated each of the CRUD features in separate pages. Page navigation goes like this
+ContactsListPage -> DisplayContactPage (delete function also here) -> EditContactPage
+                 -> AddContactPage
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Challenges encountered
+
+Android specific problems
+
+## Commit Log
+
+1. Initial commit
+2. Separation of functions from main into separate pages and also made a page for each CRUD function
+3. Added delete functionality
+4. Creation of AddContactsPage that only adds dummy data for the moment.
+5. Added form validation to AddContactsPage
+6. Added EditContactsPage with edit functionality
+7. Fixed bugs revolving edits
+8. Updated form validation
+9. Fixed error in edit page revolving if emails/phones list are empty
+
+## References
+
+- link to the reference
+- another link

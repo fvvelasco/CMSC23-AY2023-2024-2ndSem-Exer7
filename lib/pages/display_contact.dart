@@ -14,7 +14,14 @@ class _ContactPageState extends State<ContactPage> {
     final contact = ModalRoute.of(context)!.settings.arguments as Contact;
 
     return Scaffold(
-      appBar: AppBar(title: Text(contact.displayName)),
+      appBar: AppBar(
+        title: Text(
+          contact.displayName,
+          style: const TextStyle(
+            color: Colors.white
+          ),
+        ),
+        backgroundColor: Colors.blue,),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -43,7 +50,7 @@ class _ContactPageState extends State<ContactPage> {
             }, 
             child: const Text("Delete")
           ),
-          ElevatedButton(
+          ElevatedButton(                         // Delete Button
             onPressed: () async {
               if (context.mounted) {
                 Navigator.of(context).pushNamed(

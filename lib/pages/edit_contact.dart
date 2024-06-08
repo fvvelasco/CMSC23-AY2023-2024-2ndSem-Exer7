@@ -21,18 +21,25 @@ class _EditContactPageState extends State<EditContactPage>{
     final contact = ModalRoute.of(context)!.settings.arguments as Contact;
     firstname = contact.name.first;
     lastname = contact.name.last;
-    phone = contact.phones.first.number;
-    email = contact.emails.first.address;
-
+    email = contact.emails.isNotEmpty ? contact.emails.first.address : ''; 
+    phone = contact.phones.isNotEmpty ? contact.phones.first.number : ''; 
 
     return Scaffold(
-      appBar: AppBar(title: const Text("Edit Contact")),
+      appBar: AppBar(
+        title: const Text(
+          "Edit Contact",
+          style: TextStyle(
+            color: Colors.white
+          ),
+        ), 
+        backgroundColor: Colors.blue,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Form(
-          key:_formKey,
+        child: Form(        
+          key: _formKey,     
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start, 
+            mainAxisAlignment: MainAxisAlignment.center, 
             children: [
               firstnameField,
               lastnameField,
@@ -55,7 +62,6 @@ class _EditContactPageState extends State<EditContactPage>{
                     },
                     child: const Text("Update Contact")
                   )
-
               )
             ]
           )
@@ -101,6 +107,7 @@ class _EditContactPageState extends State<EditContactPage>{
         },
       ),
   );
+  
   
   Widget get emailField => Padding(
     padding: const EdgeInsets.all(8.0),

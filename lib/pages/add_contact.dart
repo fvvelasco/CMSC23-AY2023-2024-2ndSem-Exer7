@@ -16,11 +16,15 @@ class _AddContactPageState extends State<AddContactPage>{
 
   @override
   Widget build(BuildContext context){
-
-
-
     return Scaffold(
-      appBar: AppBar(title: const Text("Add Contact")),
+      appBar: AppBar(
+        title: const Text(
+          "Add Contact",
+          style: TextStyle(
+            color: Colors.white
+          ),
+        ), 
+      backgroundColor: Colors.blue,),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Form(
@@ -40,6 +44,7 @@ class _AddContactPageState extends State<AddContactPage>{
     );
   }
 
+  // Requires Firstname and Lastname field to have an input
   Widget get firstnameField => Padding(
     padding: const EdgeInsets.all(8.0),
     child:
@@ -76,6 +81,7 @@ class _AddContactPageState extends State<AddContactPage>{
       ),
   );
   
+  // 
   Widget get emailField => Padding(
     padding: const EdgeInsets.all(8.0),
     child: 
