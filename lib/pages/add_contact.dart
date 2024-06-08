@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_contacts/flutter_contacts.dart';
 
 class AddContactPage extends StatefulWidget {
+  const AddContactPage({super.key});
   @override
   _AddContactPageState createState() => _AddContactPageState();
 }
